@@ -22,14 +22,13 @@
 /* Efectos de estrellas */
 .star {
     position: absolute;
-    width: 2px;
-    height: 2px;
     background: var(--star-color);
     border-radius: 50%;
-    animation: twinkle 1s infinite;
     box-shadow: 0 0 3px rgba(255, 255, 255, 0.8);
+    animation: twinkle 2s infinite ease-in-out;
 }
 
+/* Efectos de estrellas fugaces */
 .shooting-star {
     position: absolute;
     width: 4px;
@@ -37,6 +36,7 @@
     background: linear-gradient(45deg, var(--star-color), transparent);
     border-radius: 50%;
     animation: shoot 2s linear infinite;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 50px rgba(255, 255, 255, 0.2);
 }
 
 /* Efectos de fuegos artificiales */
@@ -51,7 +51,7 @@
     position: absolute;
     width: 4px;
     height: 4px;
-    background: var(--primary-color);
+    background: radial-gradient(circle, #ff77ff, transparent);
     border-radius: 50%;
     transform-origin: center;
     opacity: 0;
@@ -74,7 +74,7 @@
     opacity: 0;
     transform: scale(0.5);
     transition: all 1s ease;
-    text-shadow: 0 0 10px rgba(255,255,255,0.5);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
     z-index: 100;
 }
 
@@ -169,4 +169,5 @@
 .fade-in {
     animation: messageAppear 1s forwards;
     animation-delay: var(--delay, 0s);
-}
+    }
+    
